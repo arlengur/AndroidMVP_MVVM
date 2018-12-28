@@ -23,7 +23,7 @@ public class ImageActivity extends Activity implements ru.arlen.mvp.View {
         bitmapView = findViewById(R.id.bitmap_view);
         progressBar = findViewById(R.id.progress);
 
-        presenter = new Presenter(new Model(this));
+        presenter = new Presenter();
         presenter.attachView(this);
         presenter.viewIsReady();
     }

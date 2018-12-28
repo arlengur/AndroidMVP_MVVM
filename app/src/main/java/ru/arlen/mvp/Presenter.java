@@ -6,12 +6,9 @@ public class Presenter {
     private View mView;
     private Model mModel;
 
-    public Presenter(Model model) {
-        mModel = model;
-    }
-
-    public void attachView(View view) {
-        mView = view;
+    public void attachView(ImageActivity activity) {
+        mView = activity;
+        mModel = new Model(activity);
     }
 
     public void detachView() {
