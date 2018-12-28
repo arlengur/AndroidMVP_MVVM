@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View {
         final RecyclerView imgList = findViewById(R.id.recycler);
         imgList.setAdapter(adapter);
 
-        viewModel.attachViewModel(this, new Model(this));
+        viewModel.attachView(this);
         viewModel.viewIsReady();
     }
 

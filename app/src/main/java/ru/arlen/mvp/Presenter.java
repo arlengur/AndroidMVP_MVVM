@@ -1,9 +1,6 @@
 package ru.arlen.mvp;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
-
-import static ru.arlen.mvvm.MainActivity.IMG;
 
 public class Presenter {
     private View mView;
@@ -22,8 +19,7 @@ public class Presenter {
     }
 
     public void viewIsReady() {
-        Intent intent = mView.getInIntent();
-        String imgName = intent.getStringExtra(IMG);
+        String imgName = mView.getInImgName();
         if (imgName != null) {
             loadBitmap(imgName);
         }

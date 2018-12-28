@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import ru.arlen.mvp_mvvm.R;
 
+import static ru.arlen.mvvm.MainActivity.IMG;
+
 public class ImageActivity extends Activity implements ru.arlen.mvp.View {
     private Presenter presenter;
     private ImageView bitmapView;
@@ -35,8 +37,9 @@ public class ImageActivity extends Activity implements ru.arlen.mvp.View {
     }
 
     @Override
-    public Intent getInIntent() {
-        return this.getIntent();
+    public String getInImgName() {
+        Intent intent = getIntent();
+        return intent.getStringExtra(IMG);
     }
 
     @Override

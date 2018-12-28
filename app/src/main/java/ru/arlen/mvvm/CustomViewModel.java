@@ -8,9 +8,9 @@ public class CustomViewModel extends ViewModel {
     private View mView;
     private Model mModel;
 
-    public void attachViewModel(View view, Model model) {
-        mView = view;
-        mModel = model;
+    public void attachView(MainActivity activity) {
+        mView = activity;
+        mModel = new Model(activity);
     }
 
     public void detachView() {
